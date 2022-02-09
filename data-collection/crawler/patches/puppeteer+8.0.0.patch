@@ -1,0 +1,50 @@
+diff --git a/node_modules/puppeteer/lib/cjs/puppeteer/common/HTTPRequest.js b/node_modules/puppeteer/lib/cjs/puppeteer/common/HTTPRequest.js
+index c248c0a..f863c6c 100644
+--- a/node_modules/puppeteer/lib/cjs/puppeteer/common/HTTPRequest.js
++++ b/node_modules/puppeteer/lib/cjs/puppeteer/common/HTTPRequest.js
+@@ -68,6 +68,7 @@ class HTTPRequest {
+         this._redirectChain = redirectChain;
+         for (const key of Object.keys(event.request.headers))
+             this._headers[key.toLowerCase()] = event.request.headers[key];
++        this._initiator = event.initiator;
+     }
+     /**
+      * @returns the URL of the request
+@@ -119,6 +120,12 @@ class HTTPRequest {
+     isNavigationRequest() {
+         return this._isNavigationRequest;
+     }
++    /**
++     * @returns {!Protocol.Network.Initiator}
++     */
++    initiator() {
++        return this._initiator;
++    }
+     /**
+      * @remarks
+      *
+diff --git a/node_modules/puppeteer/lib/esm/puppeteer/common/HTTPRequest.js b/node_modules/puppeteer/lib/esm/puppeteer/common/HTTPRequest.js
+index c58a8d7..dc8719a 100644
+--- a/node_modules/puppeteer/lib/esm/puppeteer/common/HTTPRequest.js
++++ b/node_modules/puppeteer/lib/esm/puppeteer/common/HTTPRequest.js
+@@ -65,6 +65,7 @@ export class HTTPRequest {
+         this._redirectChain = redirectChain;
+         for (const key of Object.keys(event.request.headers))
+             this._headers[key.toLowerCase()] = event.request.headers[key];
++        this._initiator = event.initiator;
+     }
+     /**
+      * @returns the URL of the request
+@@ -116,6 +117,12 @@ export class HTTPRequest {
+     isNavigationRequest() {
+         return this._isNavigationRequest;
+     }
++    /**
++     * @returns {!Protocol.Network.Initiator}
++     */
++    initiator() {
++        return this._initiator;
++    }
+     /**
+      * @remarks
+      *

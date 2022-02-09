@@ -1,0 +1,15 @@
+diff --git a/node_modules/@cliqz/adblocker-puppeteer/dist/cjs/adblocker.js b/node_modules/@cliqz/adblocker-puppeteer/dist/cjs/adblocker.js
+index 4f1db9d..f0796e8 100644
+--- a/node_modules/@cliqz/adblocker-puppeteer/dist/cjs/adblocker.js
++++ b/node_modules/@cliqz/adblocker-puppeteer/dist/cjs/adblocker.js
+@@ -41,8 +41,8 @@ function getTopLevelUrl(frame) {
+  * Create an instance of `Request` from `puppeteer.Request`.
+  */
+ function fromPuppeteerDetails(details) {
+-    const sourceUrl = getTopLevelUrl(details.frame());
+-    const url = details.url();
++    const sourceUrl = getTopLevelUrl(details.frame()).replace(/^(http|https):\/\/web\.archive\.org\/web\/\w+\//g, "");
++    const url = details.url().replace(/^(http|https):\/\/web\.archive\.org\/web\/\w+\//g, "");
+     const type = details.resourceType();
+     return adblocker_1.Request.fromRawDetails({
+         _originalRequestDetails: details,
