@@ -4,6 +4,11 @@ Su-Chin Lin, Kai-Hsiang Chou, Yen Chen, Hsu-Chun Hsiao, Darion Cassel, Lujo Baue
 
 To appear in The Web Conference 2022, (TheWebConf, WWW ’22), April 25–29, 2022, Virtual Event, Lyon, France
 
+- [Full paper](#)
+- [Extended version](media/extended.pdf)
+- [Slide](#)
+- [Presentation](#)
+
 ---
 
 ## File Structure
