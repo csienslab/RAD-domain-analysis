@@ -6,6 +6,9 @@ The Web Conference 2022, (TheWebConf, WWW ’22), April 25–29, 2022, Virtual E
 
 - [Full paper (ACM link)](https://dl.acm.org/doi/10.1145/3485447.3512218)
 - [Extended full paper](media/extended.pdf)
+- [Presentation video (TBD)](#)
+- [Slide](media/slide.pdf)
+
 
 ---
 
